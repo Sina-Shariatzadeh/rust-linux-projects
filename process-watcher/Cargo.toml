@@ -1,0 +1,10 @@
+[package]
+name = "process-watcher"
+version = "0.1.0"
+edition = "2021"
+description = "A real-time Linux process watcher that reads /proc/[PID] directly"
+
+[dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "time", "signal", "fs", "io-util"] }
+chrono = "0.4"
+clap = { version = "4.5", features = ["derive"] }
